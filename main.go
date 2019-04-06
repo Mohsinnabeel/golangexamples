@@ -7,7 +7,6 @@ package main
 
 import  "fmt" 
 import "math"
-//import "strings"
 import "github.com/ehteshamz/greetings"
 
 
@@ -49,7 +48,10 @@ func Encrypt(sliceToEncrypt []byte, ceaserCount int) {
 
 	for i := 0 ; i < len(myString) ; i++ {
 
-		tempString += string(int(math.Mod(float64(int(myString[i]) - 97 + ceaserCount), 26)) +97)
+		ascii_value := int(myString[i])
+		ascii_value = ascii_value - 97
+		simplified_Number := float64( ascii_value + ceaserCount)
+		tempString += string(int(math.Mod(simplified_Number, 26)) +97)
 
 
 
