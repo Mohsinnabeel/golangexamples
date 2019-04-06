@@ -8,6 +8,7 @@ package main
 import  "fmt" 
 import "math"
 //import "strings"
+import "github.com/ehteshamz/greetings"
 
 
 
@@ -68,6 +69,13 @@ func Encrypt(sliceToEncrypt []byte, ceaserCount int) {
 	//return tempString
 
 
+
+}
+
+
+
+func EZGreetings(name string) string{
+	return (greetings.PrintGreetings(name))
 
 }
 
